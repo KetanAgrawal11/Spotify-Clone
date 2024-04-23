@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Spotify - Web Player: Music for everyone</title>
+</head>
+
+<body class="bg-black flex">
+    <div class="left md:w-[22%] md:h-full my-2 mx-2 md:mx-1 md:block w-[100%] relative h-[100%] hidden mb-32 md:mb-16 md:translate-x-0">
+        <div class="menu py-1 mb-2 px-1 rounded-md bg-[#121212] ">
+            <div id="close" class="absolute top-4 right-4 md:hidden w-8"><i class="fa-solid fa-xmark fa-xl"
+                    style="color: white;"></i></div>
+            <a href="#"><img src="img/logo.svg" class="h-7 m-4 cursor-pointer " alt="Spotify"></a>
+            <div class="mx-4 my-2 cursor-pointer">
+                <div class="home flex items-center">
+                    <img src="img/home.svg" class="h-5 mr-6 my-2 " alt="">
+                    <p class="text-md text-white font-bold">Home</p>
+                </div>
+            </div>
+            <div class="mx-4 my-2 cursor-pointer">
+                <div class="search flex items-center">
+                    <img src="img/search.svg" class="h-5 mr-6 my-2" alt="">
+                    <p class="text-md text-white font-bold">Search</p>
+                </div>
+            </div>
+        </div>
+        <div class="library py-1 px-1 my-2 rounded-md bg-[#121212] relative">
+            <div class="ml-4 my-2 cursor-pointer">
+                <div class="playlist flex items-center">
+                    <img src="img/playlist.svg" class="h-6 mr-5 my-2" alt="">
+                    <p class="text-md text-white">Your Library</p>
+                </div>
+            </div>
+            <div id="playlist"
+                class="playlist md:h-[55vh] h-[60vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 bg-[#171913]">
+                <!-- <div class="song flex items-center hover:bg-black">
+                    <img class="m-2 h-10" src="songs/Angry_(mood)/cover.jpg" alt="">
+                    <div class="songInfo text-white">
+                        <div class="name text-sm">Bhool Bhulaiyaa 2 Title Track</div>
+                        <div class="artistName text-xs">Ketan Agrawal</div>
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="links flex flex-wrap text-xs mx-4 mb-2 mt-4 text-[#a7a7a7] ">
+                <div class="link mr-5 mb-2 cursor-pointer">Legal</div>
+                <div class="link mr-5 mb-2 cursor-pointer">Safety & Privacy Center</div>
+                <div class="link mr-5 mb-2 cursor-pointer">Privacy Policy</div>
+                <div class="link mr-5 mb-2 cursor-pointer">Cookies</div>
+                <div class="link mr-5 mb-2 cursor-pointer">About Ads</div>
+                <div class="link mr-5 mb-2 cursor-pointer">Accessibility</div>
+            </div>
+        </div>
+    </div>
+    <div class="right bg-[#121212] md:w-[78%] w-screen md:my-2 md:ml-1 md:mr-3 rounded-md relative h-[100vh]">
+        <div class="header w-[100%] flex justify-between items-center sticky top-0 bg-[#181818] z-10 p-2">
+            <div id="hamburger" class="hamburger ml-3 md:hidden"><i class="fa-solid fa-bars fa-xl"
+                    style="color: #ffffff;"></i></div>
+            <div class="navigation p-4 hidden md:block">
+                <button class="p-2 mr-2 bg-black rounded-full"><img src="img/back.svg" class="h-4" alt=""></button>
+                <button class="p-2 bg-black rounded-full"><img src="img/forward.svg" class="h-4" alt=""></button>
+            </div>
+            <div class="auth mx-4">
+                <button class="text-white font-bold mr-6 text-sm md:text-base">Sign up</button>
+                <button class="bg-white font-bold md:py-3 md:px-8 py-2 px-5 rounded-full text-sm md:text-base">Log
+                    in</button>
+            </div>
+        </div>
+        <div class="playlists text-white bg-gradient-to-br from-[#242424] to-[#121212] h-[80vh] md:h-[87vh] pb-32 md:pb-0">
+            <div class="overflow-y-scroll  max-h-full scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 scroll-smooth">
+                <div class="heading md:text-3xl text-2xl p-4 my-2 font-bold">Popular Playlists</div>
+
+
+                <div class="card-container flex  justify-center items-center flex-wrap mx-4">
+                    <!-- <div
+                        class="card md:w-44 w-36 mr-1 mb-2 p-3 hover:bg-gray-800 hover:rounded cursor-pointer relative">
+                        <div class="relative">
+                            <img src="./songs/cs/cover.jpg" class="rounded" alt="">
+                            <button class="p-2 m-2 bg-green-500 rounded-full absolute bottom-1 right-1 hidden"><img
+                                    src="img/play.svg" class="h-6" alt=""></button>
+                        </div>
+                        <div class="title text-lg font-semibold ">Pritam</div>
+                        <div class="description text-[#a7a7a7] text-sm">Hellow wolrfd</div>
+                    </div> -->
+                    
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div
+            class="playbar w-[100%] md:h-[4.5rem] flex md:justify-center md:items-center flex-col md:flex-row fixed  bottom-0 z-10 bg-gray-800 px-2 md:py-0">
+            <div id="playBarSong" class="info md:w-[30%] w-[100%] h-full flex items-center">
+                <img class="m-2 md:h-[80%] md:w-auto w-[15%] py-1" src="songs/Angry_(mood)/cover.jpg" alt="">
+                <div class="songInfo text-white  py-1">
+                    <div class="name text-sm">Bhool Bhulaiyaa 2 Title Track</div>
+                    <div class="artistName text-xs">Ketan Agrawal</div>
+                </div>
+            </div>
+            <div class="playcontrols md:w-[50%] w-[100%] p-3 md:p-0 h-full flex justify-center items-center flex-col relative">
+                <div class="controls flex justify-center items-center">
+                    <i class="previous fa-solid fa-backward-step fa-lg mr-4 cursor-pointer"  style="color: #ffffff;"></i>
+                    <div class="pausePlay cursor-pointer ">
+                        <i class=" fa-solid fa-play fa-lg" style="color: #ffffff;"></i>
+                        <!-- <i class="pause fa-solid fa-pause fa-lg" style="color: #ffffff;"></i> -->
+                    </div>
+                    <i class="cursor-pointer next fa-solid fa-forward-step fa-lg ml-4" style="color: #ffffff;"></i>
+                    <div class="timestamp text-sm absolute right-2 mr-6 md:right-0 md:mx-4  text-white">0:00 / 0:00</div>
+                </div>
+                <div class="seekbar w-[100%] mt-2 relative">
+                    <div class="line bg-gray-300 h-1 rounded mx-4 cursor-pointer"></div>
+                    <div class="currentPosition absolute mx-4 bottom-[-4px] cursor-pointer rounded-full p-1.5 translate-x-0 bg-white">
+                    </div>
+                </div>
+            </div>
+            <div class="volume-controls w-[20%] h-full md:flex justify-center items-center px-8 hidden">
+                <i class="volume fa-solid fa-volume-high" style="color: #ffffff;"></i>
+                <!-- <div class="volume-seekbar w-[100%] relative">
+                    <div class="volume-line bg-gray-300 h-1 rounded mx-4 cursor-pointer"></div>
+                    <div class="volume-level absolute mx-4 bottom-[-4px] cursor-pointer rounded-full p-1.5 translate-x-0 bg-white">
+                    </div>
+                </div> -->
+                <input type="range" class="volume-range w-full h-1 mx-4" name="" id="" value="100">
+            </div>
+            <script type="module" src="./js/index.js"></script>
+        </div>
+</body>
